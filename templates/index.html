@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파일 업로드 예제</title>
+</head>
+<body>
+    <h2>파일 업로드</h2>
+
+    <form action="{{url_for('process')}}" method="post" enctype="multipart/form-data">
+        <label for="fileInput">파일 선택:</label>
+        <input type="file" name="file" id="fileInput" accept=".txt, .pdf, .docx, .py, .log"> <!-- 허용하는 파일 형식을 지정할 수 있음 -->
+
+        <br>
+
+        <input type="submit" value="업로드">
+    </form>
+</body>
+</html>
